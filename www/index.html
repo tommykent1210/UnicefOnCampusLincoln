@@ -1,75 +1,313 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    http://www.apache.org/licenses/LICENSE-2.0
+        <link href="assets/style.css" rel="stylesheet" media="screen">
+        <link href="assets/apprise/apprise.min.css" rel="stylesheet" />
 
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Hello World</title>
-    <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="./css/font-awesome.min.css" rel="stylesheet">
-    <link href="./css/font-awesome-ie7.min.css" rel="stylesheet">
-  </head>
+        <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen" title="main">
+        <link href="assets/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="assets/font-awesome/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/bootstrap-slider/bootstrap-slider.min.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="assets/other/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/other/blockui.min.js"></script>
+        <script type="text/javascript" src="assets/other/i18next.min.js"></script>
+        <script type="text/javascript" src="assets/other/segment-display.min.js"></script>
+        <script type="text/javascript" src="assets/other/bootstrap-tabdrop.min.js"></script>
+        
+        <script type="text/javascript" src="assets/apprise/apprise.min.js"></script>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="assets/ln.js"></script>
+        <script type="text/javascript" src="assets/app.js"></script>
 
-  <body>
+        <script type="text/javascript" src="assets/bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/bootstrap-slider/modernizr.min.js"></script>
+        <script type="text/javascript" src="assets/bootstrap-slider/bootstrap-slider.min.js"></script>
+        
+        <script type="text/javascript">
+            
+            $.blockUI.defaults.css.top = '45%';
+            $.blockUI.defaults.css.border = 'none';
+            $.blockUI.defaults.css.background = 'none';
+            $.blockUI.defaults.overlayCSS.opacity = 0.5;
+            $.blockUI.defaults.message = '<div style="margin: 17px; vertical-align: middle; display: inline-block"><i class="icon-cog icon-spin icon-4x"></i></div>';
+            
+            $(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
+            
+        </script>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
+        <title>PhoneGap Demo Bootstrap</title>
+    </head>
+    <body>
+            
+        <div class="container-fluid">
+            
+            <div class="row-fluid">
+                
+                <div class="well well-small" id="menu-buttons">
+                    
+                    <div class="pull-left" style="width: 48%">
+
+                        <div class="btn-group">
+                            
+                            <a class="btn dropdown-leader" id="buttonStyle">
+                                
+                                <i class="icon-cog"></i> 
+                                
+                                <span data-i18n="buttons.style">buttons.style</span>
+                            
+                            </a>
+                            
+                            <a class="btn dropdown-toggle" data-toggle="dropdown">
+                                
+                                <span class="icon-caret-down"></span>
+                            
+                            </a>
+                            
+                            <ul class="dropdown-menu">
+                              
+                                <li><a class="change-style-menu-item" rel="assets/bootstrap/bootstrap.amelia.min.css"><i class="icon-fixed-width"></i> bootstrap.amelia.min.css (Amelia)</a></li>
+
+                                <li><a class="change-style-menu-item" rel="assets/bootstrap/bootstrap.cerulean.min.css"><i class="icon-fixed-width"></i> bootstrap.cerulean.min.css (Cerulean)</a></li>
+
+                                <li><a class="change-style-menu-item" rel="assets/bootstrap/bootstrap.cosmo.min.css"><i class="icon-fixed-width"></i> bootstrap.cosmo.min.css (Cosmo)</a></li>
+
+                                <li><a class="change-style-menu-item" rel="assets/bootstrap/bootstrap.cyborg.min.css"><i class="icon-fixed-width"></i> bootstrap.cyborg.min.css (Cyborg)</a></li>
+
+                                <li><a class="change-style-menu-item" rel="assets/bootstrap/bootstrap.flatly.min.css"><i class="icon-fixed-width"></i> bootstrap.flatly.min.css (Flatly)</a></li>
+
+                                <li><a class="change-style-menu-item" rel="assets/bootstrap/bootstrap.journal.min.css"><i class="icon-fixed-width"></i> bootstrap.journal.min.css (Journal)</a></li>
+
+                                <li><a class="change-style-menu-item" rel="assets/bootstrap/bootstrap.readable.min.css"><i class="icon-fixed-width"></i> bootstrap.readable.min.css (Readable)</a></li>
+
+                                <li><a class="change-style-menu-item" rel="assets/bootstrap/bootstrap.simplex.min.css"><i class="icon-fixed-width"></i> bootstrap.simplex.min.css (Simplex)</a></li>
+
+                                <li><a class="change-style-menu-item" rel="assets/bootstrap/bootstrap.slate.min.css"><i class="icon-fixed-width"></i> bootstrap.slate.min.css (Slate)</a></li>
+
+                                <li><a class="change-style-menu-item" rel="assets/bootstrap/bootstrap.spacelab.min.css"><i class="icon-fixed-width"></i> bootstrap.spacelab.min.css (Spacelab)</a></li>
+
+                                <li><a class="change-style-menu-item" rel="assets/bootstrap/bootstrap.superhero.css"><i class="icon-fixed-width"></i> bootstrap.superhero.css (Superhero)</a></li>
+
+                                <li><a class="change-style-menu-item" rel="assets/bootstrap/bootstrap.united.min.css"><i class="icon-fixed-width"></i> bootstrap.united.min.css (United)</a></li>
+
+                                <li class="divider"></li>
+
+                                <li><a style="font-weight: bold" class="change-style-menu-item" rel="assets/bootstrap/bootstrap.min.css"><i class="icon-fixed-width icon-arrow-right"></i> bootstrap.min.css (Default)</a></li>
+                              
+                            </ul>
+                            
+                        </div>
+                        
+                        <div class="btn-group">
+                            
+                            <a class="btn btn-warning dropdown-leader" id="buttonLanguage">
+                                
+                                <i class="icon-align-left"></i> 
+                                
+                                <span data-i18n="buttons.language">buttons.language</span>
+                            </a>
+                            
+                            <a class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                                
+                                <span class="icon-caret-down"></span>
+                            
+                            </a>
+                            
+                            <ul class="dropdown-menu">
+                              
+                                <li><a class="change-language-menu-item" data-language="Deutsch"><i class="icon-fixed-width"></i> Deutsch (de-DE)</a></li>
+
+                                <li><a class="change-language-menu-item" data-language="中文"><i class="icon-fixed-width"></i> 中文（简体） (zh-CN)</a></li>
+                                
+                                <li><a class="change-language-menu-item" data-language="polski"><i class="icon-fixed-width"></i> polski (pl-PL)</a></li>
+                                
+                                <li class="divider"></li>
+
+                                <li><a style="font-weight: bold" class="change-language-menu-item" rel="en" data-language="English"><i class="icon-fixed-width icon-arrow-right"></i> English (en-GB)</a></li>
+
+                            </ul>
+                            
+                        </div>
+
+                    </div>
+
+                    <div class="pull-right text-right" style="width: 48%">
+
+                        <a id="btnInfo" class="btn btn-primary"><i class="icon-info"></i> <span data-i18n="buttons.info">buttons.info</span></a>
+                        
+                        <a id="btnAcrid" class="btn btn-info"><i class="icon-hand-right"></i> <span data-i18n="buttons.acrid">buttons.acrid</span></a>
+
+                    </div>
+
+                    <div style="clear: both"></div>
+
+                </div>
+                
+                <ul class="nav nav-tabs">
+                    
+                    <li class="active"><a href="#bootstrap" data-i18n="tabs.bootstrap" data-toggle="tab">tabs.bootstrap</a></li>
+
+                    <li><a href="#javascript" data-i18n="tabs.javascript" data-toggle="tab">tabs.javascript</a></li>
+
+                    <li><a href="#phonegap" data-i18n="tabs.phonegap" data-toggle="tab">tabs.phonegap</a></li>
+                    
+                    <li><a href="#other" data-toggle="tab">Other</a></li>
+                    
+                    <li><a href="#more" data-toggle="tab">More</a></li>
+                    
+                  
+                </ul>
+
+                <div class="tab-content">
+                    
+                    <div class="tab-pane active" id="bootstrap" data-url="_bootstrap.html">Please wait, loading...</div>
+
+                    <div class="tab-pane" id="javascript" data-url="_javascript.html">Please wait, loading...</div>
+
+                    <div class="tab-pane" id="phonegap" data-url="_phonegap.html">Please wait, loading...</div>
+                    
+                    <div class="tab-pane" id="other" data-url="_other.html">Please wait, loading...</div>
+                    
+                    <div class="tab-pane" id="more">This is only a fake tab -- This page is intentionally left blank.</div>
+                  
+                </div>
+                    
+            </div>
+            
         </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
+        
+        <div id="blockui-animated-content" style="display: none; padding: 15px">
+            
+            <div style="margin-right: 7px; vertical-align: middle; display: inline-block">
+                
+                <i class="icon-cog icon-spin icon-3x"></i>
+                    
+            </div>
+            
+        </div>
+		
+        <script type="text/javascript">
+        /*<![CDATA[*/
+            /**
+             * jQuery
+             */
+            $(function($)
+            {
+                /**
+                 * Device info dialog box.
+                 * 
+                 * Gathers device information and displays it as Bootstrap modal.
+                 */
+                $('body').on('click', '#btnInfo', function()
+                {
+                    var info =
+                        'Model: <strong>' + device.model + '</strong>.<br />' + 
+                        'UUID: <strong>' + device.uuid + '</strong>.<br />' + 
+                        'OS: <strong>' + device.platform + ' ' + device.version + '</strong>.<br />' +
+                        'Screen: <strong>' + screen.availHeight + 'x' + screen.availWidth + '</strong>.';
 
-    <div class="container">
-
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
-
-    </div><!-- /.container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./js/jquery.min.js"></script>
-    <script src=".js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="phonegap.js"></script>
-  </body>
+                    apprise(info, {});
+                });
+                
+                $('body').on('click', '#btnAcrid', function()
+                {
+                    app.openUrl('http://acrid.pl');
+                });
+                
+                $('body').on('click', '.nav-tabs', function()
+                {
+                    app.updatePhonegapTab();
+                });
+                
+                /**
+                 * Dynamic stylesheet changer.
+                 * 
+                 * onClick handler for dynamic change of Bootstrap's styles. Based
+                 * on Bootswatch.com's Bootstrap styles and following example:
+                 * 
+                 * http://www.cssnewbie.com/simple-jquery-stylesheet-switcher/#.UdusmTv0F0o
+                 */
+                $('body').on('click', '#buttonStyle', function()
+                {
+                    apprise(i18n.t("messages.style"), {});
+                });
+                
+                $('body').on('click', '.change-style-menu-item', function()
+                {
+                    var
+                        item = $(this).text(),
+                        stylesheet = item.substring(1, item.indexOf('(') - 1),
+                        title = item.substring(item.indexOf('(') + 1, item.indexOf(')'));
+                        
+                    $('link[title="main"]').attr('href', $(this).attr('rel'));
+                    
+                    $('header#overview').find('h1').html(title);
+                    $('header#overview').find('code').html(stylesheet);
+                    
+                    $('.change-style-menu-item').css('font-weight', 'normal').find('i').removeClass('icon-arrow-right');
+                    $(this).css('font-weight', 'bold').find('i').addClass('icon-arrow-right');
+                    
+                    if(typeof(theClock) !== 'undefined')
+                    {
+                        var colorOff = (title === 'Cyborg' || title === 'Slate' || title === 'Superhero') ? 'rgba(27, 65, 5, 0.3)' : 'rgba(200, 200, 200, 0.3)';
+                        
+                        theClock.colorOff = theDisplay.colorOff = colorOff;
+                        theClock.colorOn = theDisplay.colorOn = $('h1').css('color');
+                    }
+                    
+                    app.updatePhonegapTab();
+                    
+                    app.writeEventLog('Changing style to "' + title + '" (' + stylesheet + ').');
+                });
+                
+                /**
+                 * Dynamic language changer.
+                 * 
+                 * onClick handler for dynamic change of page's language. Based
+                 * on i18next engine: http://i18next.com/
+                 * 
+                 * Note: We're using local language names here (i.e. 中文 -- for Chinese),
+                 * which seems to be way, way harder (more stupid?) than just using
+                 * ISO 639-1 two-letter codes (i.e. zh -- for Chinese). Don't blame
+                 * me -- this is how (stupidly) PhoneGap is build, that it returns
+                 * local language name from navigator.globalization.getPreferredLanguage
+                 * while it SHOULD return code. So, entire mechanism is oriented
+                 * toward this behavior, and that is why, you have to provide real,
+                 * not encoded, not escapsed name in `data-language` attribute. Use:
+                 * 
+                 * http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+                 * 
+                 * to get actual local name, for (nearly) any language, you wish.
+                 */
+                $('body').on('click', '#buttonLanguage', function()
+                {
+                    apprise(i18n.t("messages.language"), {});
+                });
+                
+                $('body').on('click', '.change-language-menu-item', function()
+                {
+                    var language = $(this).attr('data-language');
+                    
+                    ln.setLanguage(language);
+                    
+                    app.writeEventLog('Changing language to: ' + ln.language.international + ' (' + ln.language.local + ').');
+                });
+                
+                /**
+                 * Tab drop for Bootstrap
+                 * 
+                 * http://www.eyecon.ro/bootstrap-tabdrop/
+                 */
+                $('.nav-tabs').tabdrop();
+            });
+        /*]]>*/
+        </script>
+        
+    </body>
+    
 </html>
-
