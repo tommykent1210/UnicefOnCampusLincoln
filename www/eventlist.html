@@ -33,7 +33,7 @@
         <script type="text/javascript" src="assets/bootstrap-slider/modernizr.min.js"></script>
         <script type="text/javascript" src="assets/bootstrap-slider/bootstrap-slider.min.js"></script>
         
-        <script type="text/javascript">
+        <!--<script type="text/javascript">
             
             $.blockUI.defaults.css.top = '45%';
             $.blockUI.defaults.css.border = 'none';
@@ -43,7 +43,7 @@
             
             $(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
             
-        </script>
+        </script>-->
         
         <script type="text/javascript">
         if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/)) {
@@ -53,7 +53,6 @@
         }
 
         function OnDeviceReady() {
-            navigator.splashscreen.hide();
             unicef.initialize();
         }
         </script>
@@ -65,61 +64,34 @@
         <div id="navigation"></div>
         
         <div class="container">
+            <div id="eventlist-page" data-role="page">
+                <div data-role="header">
+                    <h1><i class="icon-home"></i> Alex Bachuk Portfolio</h1>
+                </div><!-- /#header -->
+                
+                <div id="eventlist-content" data-role="content">
+                    
+                    
+                    <div id="eventlist-data"></div>
 
-            <!-- Main component for a primary marketing message or call to action -->
-            <div class="jumbotron">
-                <h1>Navbar example</h1>
-                <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-                <p>To see the difference between static and fixed top navbars, just scroll.</p>
-                <p>
-                    <a class="btn btn-lg btn-primary" href="../../components/#navbar">View navbar docs »</a>
-                </p>
+
+                    <script id="eventlist-template" type="text/x-handlebars-template">
+                        
+                        {{#each posts}}
+                            <div class="eventlist-piece">
+
+                            <img src="{{attachments.[0].url}}" />
+                            <h4>{{title}}</h4>
+                            </div>
+                        {{/each}}
+                        
+                    </script>
+                </div>
             </div>
 
-            <p><a class="btn btn-success" href="spec.html">Test</a></p>
-            <br />
-            <p><a class="btn btn-success" href="./spec.html">Test with dot-slash</a></p>
-            <br />
-            <p> test </p>
-            <br />
-            <p> test </p>
-            <br />
-            <p> test </p>
-            <br />
-            <p> test </p>
-            <br />
-            <p> test </p>
-            <br />
-            <p> test </p>
-            <br />
-            <p> test </p>
-            <br />
-            <p> test </p>
-            <br />
-            <p> test </p>
-            <br />
-            <p> test </p>
-            <br />
-            <p> test </p>
-            <br />
-            <p> test </p>
-            <br />
-            <p> test </p>
-            <br />
-            <p> test </p>
-            <br />
-            <p> test </p>
-            <br />
-            <p> test </p>
-            <br />
-            <p> test </p>
-            <br />
-            <p> test </p>
-            <br />
-            <p> test </p>
-            <br />
-            <p> test </p>
-            <br />
+            <script type="text/javascript">
+                wordpress.eventlist();
+            </script>
         </div> <!-- /container -->
     </body>
     
