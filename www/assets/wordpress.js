@@ -79,7 +79,7 @@ var wordpress = {
                 var template = Handlebars.compile(source);
                 var indexcarouselData = template(data);
                 alert(indexcarouselData);
-                $("#indexcarousel-data").html("test");
+                $("#indexcarousel-data").html(indexcarouselData);
                 $("#indexcarousel-data").trigger('create');
 
             },
