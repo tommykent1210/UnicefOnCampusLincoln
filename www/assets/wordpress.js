@@ -79,8 +79,8 @@ var wordpress = {
                 var template = Handlebars.compile(source);
                 var indexcarouselData = template(data);
                 alert(indexcarouselData);
-                $('#indexcarousel-data').html(indexcarouselData);
-                $('#indexcarousel-data').trigger('create');
+                $("#indexcarousel-data").html(indexcarouselData);
+                $("#indexcarousel-data").trigger('create');
 
             },
             error: function(data){
