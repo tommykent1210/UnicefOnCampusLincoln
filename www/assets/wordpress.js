@@ -66,28 +66,6 @@ var wordpress = {
                 console.log(data);
             }
         });
-    },
-
-    indexslider: function(){
-        $.ajax({
-            url: wordpress.baseURL + 'get_category_posts/?slug=mobile-slider-images',
-            type: 'GET',
-            dataType: 'json',
-            success: function(data){
-                alert(data);
-                var source   = $("#indexcarousel-template").html();
-                var template = Handlebars.compile(source);
-                var indexcarouselData = template(data);
-                alert(indexcarouselData);
-                $("#indexcarousel-data").html(indexcarouselData);
-                $("#indexcarousel-data").trigger('create');
-
-            },
-            error: function(data){
-                alert(data.statusText);
-                console.log(data);
-            }
-        });
     }
     
 
