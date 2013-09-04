@@ -80,11 +80,10 @@
                         {{#each posts}}
                         <div class="row">
                             <div class="thumbnail" style="max-width:100%;">
-                                <div class="eventpreview">
-                                    <img src="{{attachments.[0].url}}" alt="{{title}}">
-                                </div>
+                                <img class="eventpreview" src="{{attachments.[0].url}}" alt="{{title}}">
+                                
                                 <div class="caption">
-                                    <h4>{{title}}</h4>
+                                    <h4><a href="">{{title}}</a></h4>
                                     {{{excerpt}}}
                                 </div>
                             </div>
