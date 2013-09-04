@@ -3,7 +3,7 @@
 */
 
 .navbar-inverse {
-	background-color: #0099ff;
+	background-color: #00ADFF;
 	border-color: #007BCE;
 }
 
@@ -17,7 +17,7 @@ color: #fff;
 
 .navbar-inverse .navbar-nav>.active>a, .navbar-nav>.active>a:hover, .navbar-nav>.active>a:focus {
 	color: #fff;
-	background-color: #00ADFF;
+	background-color: #0BB1FF;
 }
 
 .navbar-inverse .navbar-nav>li>a {

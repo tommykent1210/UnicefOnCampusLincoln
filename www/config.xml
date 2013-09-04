@@ -52,6 +52,8 @@
     <preference name="AutoHideSplashScreen" value="false" />
     <preference name="OpenAllWhitelistURLsInWebView" value="No" />
     <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="FadeSplashScreen" value="true" />
+    <preference name="FadeSplashScreenDuration" value="3" />
     <feature name="http://api.phonegap.com/1.0/battery"/>
     <feature name="http://api.phonegap.com/1.0/media"/>
     <feature name="http://api.phonegap.com/1.0/device"/>
