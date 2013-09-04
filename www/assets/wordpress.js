@@ -66,7 +66,7 @@ var wordpress = {
                 console.log(data);
             }
         });
-    }
+    },
 
     indexslider: function(){
         $.ajax({
