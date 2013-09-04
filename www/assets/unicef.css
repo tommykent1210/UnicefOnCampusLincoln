@@ -28,3 +28,7 @@ color: #fff;
 	color: #fff;
 	background-color: #00adff;
 }
+
+.eventpreview {
+	max-height: 40px;
+}
