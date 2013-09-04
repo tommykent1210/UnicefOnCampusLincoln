@@ -12,7 +12,8 @@
         <link href="assets/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
         <link href="assets/font-awesome/font-awesome.min.css" rel="stylesheet">
         <link href="assets/bootstrap-slider/bootstrap-slider.min.css" rel="stylesheet" />
-        
+        <!--<link href="assets/bootstrap/bootstrap.amelia.min.css" rel="stylesheet">-->
+
         <script type="text/javascript" src="assets/other/jquery.min.js"></script>
         <script type="text/javascript" src="assets/other/blockui.min.js"></script>
         <script type="text/javascript" src="assets/other/i18next.min.js"></script>
@@ -41,63 +42,27 @@
             
         </script>
 
-        <title>PhoneGap Demo Bootstrap</title>
-        <link href="assets/bootstrap/bootstrap.amelia.min.css" rel="stylesheet" />
+        <title>Test Site</title>
     </head>
     <body>
             
         <div class="container-fluid">
             
             <div class="row-fluid">
-                
-                <div class="well well-small" id="menu-buttons">
-                    
-                    <div class="pull-left" style="width: 48%">
-                        
-                        <div class="btn-group">
-                            
-                            <a class="btn btn-warning dropdown-leader" id="buttonLanguage">
-                                
-                                <i class="icon-align-left"></i> 
-                                
-                                <span data-i18n="buttons.language">buttons.language</span>
-                            </a>
-                            
-                            <a class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
-                                
-                                <span class="icon-caret-down"></span>
-                            
-                            </a>
-                            
-                            <ul class="dropdown-menu">
-                              
-                                <li><a class="change-language-menu-item" data-language="Deutsch"><i class="icon-fixed-width"></i> Deutsch (de-DE)</a></li>
+                <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+                                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="/index.html"><i class="icon-home icon-white"> </i></a>
+                  </div>
 
-                                <li><a class="change-language-menu-item" data-language="中文"><i class="icon-fixed-width"></i> 中文（简体） (zh-CN)</a></li>
-                                
-                                <li><a class="change-language-menu-item" data-language="polski"><i class="icon-fixed-width"></i> polski (pl-PL)</a></li>
-                                
-                                <li class="divider"></li>
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                  </ul>
 
-                                <li><a style="font-weight: bold" class="change-language-menu-item" rel="en" data-language="English"><i class="icon-fixed-width icon-arrow-right"></i> English (en-GB)</a></li>
-
-                            </ul>
-                            
-                        </div>
-
-                    </div>
-
-                    <div class="pull-right text-right" style="width: 48%">
-
-                        <a id="btnInfo" class="btn btn-primary"><i class="icon-info"></i> <span data-i18n="buttons.info">buttons.info</span></a>
-                        
-                        <a id="btnAcrid" class="btn btn-info"><i class="icon-hand-right"></i> <span data-i18n="buttons.acrid">buttons.acrid</span></a>
-
-                    </div>
-
-                    <div style="clear: both"></div>
-
-                </div>
+                  
+                </nav>
+            </div>
                 
                 <ul class="nav nav-tabs">
                     
