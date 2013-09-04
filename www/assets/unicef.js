@@ -13,7 +13,11 @@ var unicef =
 	},
 
 	drawNav: function(){
-		$("#navigation").load("_navbar.html");
+		$(function() {
+
+			$("#navigation").load("assets/navbar.html");
+			
+		});
 	},
 
 
