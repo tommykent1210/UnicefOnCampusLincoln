@@ -1,0 +1,30 @@
+/*
+*	Custom UNICEF Styles
+*/
+
+.navbar-inverse {
+	background-color: #0099ff;
+	border-color: #007BCE;
+}
+
+.navbar-toggle {
+	border-color: #49A8E7;
+}
+
+.navbar-brand {
+	color: #FFF;
+}
+
+.navbar-nav>.active>a, .navbar-nav>.active>a:hover, .navbar-nav>.active>a:focus {
+	color: #fff;
+	background-color: #00ADFF;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #fff;
+}
+
+.navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
+color: #fff;
+background-color: #00adff;
+}
