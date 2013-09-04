@@ -83,6 +83,7 @@ var wordpress = {
 
             },
             error: function(data){
+                alert(data.statusText);
                 console.log(data);
             }
         });
