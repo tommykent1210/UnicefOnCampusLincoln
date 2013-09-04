@@ -30,6 +30,9 @@ color: #fff;
 }
 
 .eventpreview {
-	min-height: 40px;
-	max-height: 25%;
+	min-height: 300px;
+	max-height: 400px;
+	max-width: 100%;
+	min-width: 60px;
+
 }
