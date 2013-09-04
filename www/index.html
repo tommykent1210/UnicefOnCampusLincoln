@@ -12,14 +12,12 @@
         <!--<link href="assets/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">-->
         <link href="assets/font-awesome/font-awesome.min.css" rel="stylesheet">
         <link href="assets/bootstrap-slider/bootstrap-slider.min.css" rel="stylesheet" />
-        <!--<link href="assets/bootstrap/bootstrap.amelia.min.css" rel="stylesheet">-->
-
         <link href="assets/unicef.css" rel="stylesheet" />
 
         <script type="text/javascript" src="assets/other/jquery.min.js"></script>
         <script type="text/javascript" src="assets/other/blockui.min.js"></script>
         <script type="text/javascript" src="assets/other/i18next.min.js"></script>
-        <script type="text/javascript" src="assets/other/segment-display.min.js"></script>
+        <!-- NOT NEEDED <script type="text/javascript" src="assets/other/segment-display.min.js"></script>-->
         <script type="text/javascript" src="assets/other/bootstrap-tabdrop.min.js"></script>
         
         <script type="text/javascript" src="assets/apprise/apprise.min.js"></script>
@@ -27,6 +25,7 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="assets/ln.js"></script>
         <script type="text/javascript" src="assets/app.js"></script>
+        <script type="text/javascript" src="assets/unicef.js"></script>
 
         <script type="text/javascript" src="assets/bootstrap/bootstrap.min.js"></script>
         <script type="text/javascript" src="assets/bootstrap-slider/modernizr.min.js"></script>
@@ -43,29 +42,9 @@
             $(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
             
         </script>
-
-        <script type="text/javascript" charset="utf-8">
-
-        // Wait for device API libraries to load
-        //
-        function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
-        }
-
-        // device APIs are available
-        //
-        function onDeviceReady() {
-            // Now safe to use device APIs
-            $("#navigation").load("_navbar.html");
-            navigator.splashscreen.hide();
-        }
-
-        </script>
-
-        
-        <title>Test Site</title>
+        <title>UNICEF On Campus Lincoln</title>
     </head>
-    <body style="padding-top: 70px;" onload="onLoad()">
+    <body style="padding-top: 70px;" onload="unicef.onLoad()">
       
         <!-- navbar, loaded from _navbar.html -->
         <div id="navigation"></div>
