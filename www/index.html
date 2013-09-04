@@ -42,9 +42,22 @@
             $(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
             
         </script>
+        
+        <script type="text/javascript">
+        if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/)) {
+          document.addEventListener("deviceready", OnDeviceReady, false);
+        } else {
+          OnDeviceReady(); //this is the browser
+        }
+
+        function OnDeviceReady() {
+            navigator.splashscreen.hide();
+            unicef.initialize();
+        }
+        </script>
         <title>UNICEF On Campus Lincoln</title>
     </head>
-    <body style="padding-top: 70px;" onload="unicef.onLoad()">
+    <body style="padding-top: 70px;">
       
         <!-- navbar, loaded from _navbar.html -->
         <div id="navigation"></div>
