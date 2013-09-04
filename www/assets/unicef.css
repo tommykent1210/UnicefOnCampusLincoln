@@ -15,16 +15,16 @@
 	color: #FFF;
 }
 
-.navbar-nav>.active>a, .navbar-nav>.active>a:hover, .navbar-nav>.active>a:focus {
+.navbar-inverse .navbar-nav .active a, .navbar-nav .active a:hover, .navbar-nav .active a:focus {
 	color: #fff;
 	background-color: #00ADFF;
 }
 
-.navbar-inverse .navbar-nav>li>a {
+.navbar-inverse .navbar-nav li a {
 	color: #fff;
 }
 
-.navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
+.navbar-inverse .navbar-nav .open a:hover, .navbar-inverse .navbar-nav .open a:focus {
 color: #fff;
 background-color: #00adff;
 }
