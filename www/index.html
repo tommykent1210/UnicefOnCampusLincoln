@@ -42,12 +42,36 @@
             
         </script>
 
+        <script type="text/javascript" charset="utf-8">
+
+        // Wait for device API libraries to load
+        //
+        function onLoad() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+
+        // device APIs are available
+        //
+        function onDeviceReady() {
+            // Now safe to use device APIs
+            $("#navigation").load("_navbar.html");
+        }
+
+        </script>
+
+        
         <title>Test Site</title>
     </head>
-    <body style="padding-top: 70px;">
+    <body style="padding-top: 70px;" onload="onLoad()">
       
+        <div id="navigation">
 
-        <!-- Fixed navbar -->
+        </div>
+        <script>
+            
+        </script>
+
+        <!-- Fixed navbar --
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -81,9 +105,9 @@
                         <li><a href="../navbar-static-top/">Static top</a></li>
                         <li class="active"><a href="./">Fixed top</a></li>
                     </ul>
-                </div><!--/.nav-collapse -->
+                </div>
             </div>
-        </div>
+        </div><!--/.nav -->
 
         <div class="container">
 
