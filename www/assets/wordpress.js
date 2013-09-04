@@ -74,10 +74,11 @@ var wordpress = {
             type: 'GET',
             dataType: 'json',
             success: function(data){
-
+                alert(data);
                 var source   = $("#indexcarousel-template").html();
                 var template = Handlebars.compile(source);
                 var indexcarouselData = template(data);
+                alert(indexcarouselData);
                 $('#indexcarousel-data').html(indexcarouselData);
                 $('#indexcarousel-data').trigger('create');
 
