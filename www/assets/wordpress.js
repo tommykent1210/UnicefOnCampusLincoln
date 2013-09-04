@@ -54,7 +54,7 @@ var wordpress = {
             type: 'GET',
             dataType: 'json',
             success: function(data){
-                
+
                 var source   = $("#eventlist-template").html();
                 var template = Handlebars.compile(source);
                 var eventlistData = template(data);
